@@ -1,0 +1,17 @@
+@use "variables" as vars;
+@use "mixins" as mixins;
+
+.site-footer {
+    background-color: vars.$primary-color;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+
+    p {
+        margin: 0;
+    }
+
+    @include mixins.respond(mobile) {
+        font-size: 0.9rem;
+    }
+}

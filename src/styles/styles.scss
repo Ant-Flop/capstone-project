@@ -1,0 +1,42 @@
+@use "variables" as vars;
+@use "mixins" as mixins;
+@use "header";
+@use "footer";
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.slider {
+    width: 100%;
+    overflow: hidden;
+
+    .slides {
+        @include mixins.flex(flex-start);
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+
+        img {
+            max-width: 100%;
+            height: auto;
+            scroll-snap-align: start;
+            flex-shrink: 0;
+        }
+    }
+
+    @include mixins.respond(mobile) {
+        .slides {
+            gap: 0.5rem;
+        }
+    }
+}
