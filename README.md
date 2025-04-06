@@ -1,7 +1,3 @@
-Here's an updated `README.md` in English for your project:
-
----
-
 # Capstone Project Template
 
 This is a simple web project that utilizes HTML, SCSS, and JavaScript. It includes a responsive image carousel and other interactive elements.
@@ -79,7 +75,3 @@ The project structure is as follows:
 ### Deployment
 
 To deploy the project to a live server, follow the specific instructions for your hosting provider. Make sure to compile the SCSS into CSS before deploying the project.
-
----
-
-Let me know if you'd like to add or modify any sections!
