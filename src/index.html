@@ -4,26 +4,33 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Online Learning Platforml</title>
-        <link rel="stylesheet" href="../src/css/styles.css" />
+        <link rel="stylesheet" href="css/styles.css" />
     </head>
-    <body>
+    <body data-page="home">
         <header class="site-header">
             <div class="container">
-                <h1 class="logo">Online Learning Platform</h1>
+                <h1 class="logo">OLP</h1>
+
+                <input
+                    type="checkbox"
+                    id="burger-toggle"
+                    class="burger-toggle"
+                />
+                <label for="burger-toggle" class="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
 
                 <nav class="main-nav">
                     <ul class="menu">
-                        <li><a href="#">General</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li>
-                            <a href="#">Courses</a>
-                            <ul class="submenu">
-                                <li><a href="#">Frontend</a></li>
-                                <li><a href="#">Backend</a></li>
-                                <li><a href="#">UI/UX</a></li>
-                            </ul>
+                            <a href="gallery.html">Gallery</a>
+                            <ul class="submenu" id="courses-submenu"></ul>
                         </li>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Contacts</a></li>
+                        <li><a href="about-us.html">About us</a></li>
+                        <li><a href="contacts.html">Contacts</a></li>
                     </ul>
                 </nav>
 
@@ -47,11 +54,16 @@
                 <img src="assets/images/slide2.jpg" alt="Slide 2" />
                 <img src="assets/images/slide3.jpg" alt="Slide 3" />
             </div>
+            <div class="slider-indicators">
+                <span class="indicator active"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+            </div>
         </section>
 
         <main class="main-content container">
             <article>
-                <h2>Welcome to Our Programming Learning Platform!</h2>
+                <h3>Welcome to Our Programming Learning Platform!</h3>
                 <p>
                     Unlock the world of modern technologies with our educational
                     platform. Here you’ll find everything you need to start your
@@ -63,7 +75,7 @@
                 <h3>Why Choose Us?</h3>
 
                 <section>
-                    <h4>01. Easy to Get Started</h4>
+                    <h4>Easy to Get Started</h4>
                     <p>
                         Our courses are designed with beginners in mind. You’ll
                         start with the basics and move forward through a
@@ -74,7 +86,7 @@
                 </section>
 
                 <section>
-                    <h4>02. Everything You Need in One Place</h4>
+                    <h4>Everything You Need in One Place</h4>
                     <p>
                         The platform includes video lessons, interactive coding
                         exercises, practice tasks, quizzes, documentation, and
@@ -85,7 +97,7 @@
                 </section>
 
                 <section>
-                    <h4>03. Courses for All Levels</h4>
+                    <h4>Courses for All Levels</h4>
                     <p>
                         We offer courses for every skill level: from beginner
                         (Start) to advanced (Pro) and specialized (Expert).
@@ -96,7 +108,7 @@
                 </section>
 
                 <section>
-                    <h4>04. Flexibility and Affordability</h4>
+                    <h4>Flexibility and Affordability</h4>
                     <p>
                         Learn at your own pace, from any device, anytime,
                         anywhere. Start with free courses and upgrade to a paid
@@ -106,7 +118,7 @@
                 </section>
 
                 <section>
-                    <h4>05. Up-to-Date Content</h4>
+                    <h4>Up-to-Date Content</h4>
                     <p>
                         We regularly release new courses and keep existing ones
                         updated to reflect the latest trends and technologies.
@@ -117,7 +129,7 @@
                 </section>
 
                 <section>
-                    <h4>06. Wide Range of Topics</h4>
+                    <h4>Wide Range of Topics</h4>
                     <p>
                         Web, Backend, Mobile, Desktop, DevOps, UI/UX Design,
                         Testing, Databases, Machine Learning — we cover all
@@ -128,7 +140,7 @@
                 </section>
 
                 <section>
-                    <h4>07. Support and Community</h4>
+                    <h4>Support and Community</h4>
                     <p>
                         You're not alone in your learning journey. Join our
                         active community, participate in forums, and get help
@@ -136,11 +148,6 @@
                         together with other students and professionals.
                     </p>
                 </section>
-
-                <p>
-                    Join thousands of students who have already chosen our path
-                    — learn, practice, and build your future with us!
-                </p>
             </article>
         </main>
 
@@ -149,6 +156,7 @@
                 <p>&copy; 2025 Online Courses. All rights reserved.</p>
             </div>
         </footer>
-        <script src="/src/scripts/index.js"></script>
+        <script src="scripts/index.js"></script>
+        <script src="scripts/home.js"></script>
     </body>
 </html>

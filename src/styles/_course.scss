@@ -1,0 +1,15 @@
+@use "variables" as vars;
+@use "mixins" as mixins;
+
+body[data-page="course"] .main-content {
+    .course-detail {
+        img {
+            width: 100%;
+            max-width: 300px;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+    }
+}

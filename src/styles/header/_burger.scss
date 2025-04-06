@@ -1,0 +1,23 @@
+@use "../variables" as vars;
+@use "../mixins" as mixins;
+
+.site-header {
+    .burger-toggle {
+        display: none;
+    }
+
+    .burger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+
+        span {
+            height: 3px;
+            background-color: vars.$dark-color;
+            border-radius: 5px;
+        }
+    }
+}

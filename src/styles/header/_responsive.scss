@@ -1,0 +1,105 @@
+@use "../variables" as vars;
+@use "../mixins" as mixins;
+
+.site-header {
+    @media (width <= 1028px) {
+        .container {
+            padding: 10px 20px;
+            background-color: vars.$white-color;
+            color: vars.$dark-color;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            display: none;
+        }
+
+        .main-nav .menu li a {
+            font-size: 0.9rem;
+        }
+
+        .social-icons {
+            display: none;
+        }
+    }
+
+    @media (width <= 480px) {
+        .logo {
+            font-size: 1.2rem;
+        }
+
+        .social-icons {
+            justify-content: center;
+        }
+    }
+
+    @include mixins.respond(ta) {
+        .submenu {
+            display: none;
+        }
+
+        li:hover .submenu {
+            display: none;
+        }
+    }
+
+    @media (width <= 1028px) {
+        .burger {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 4px;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            z-index: 1000;
+
+            span {
+                height: 3px;
+                background-color: vars.$dark-color;
+                border-radius: 2px;
+            }
+        }
+
+        .burger-toggle {
+            display: none;
+        }
+
+        .main-nav {
+            position: absolute;
+            top: vars.$header-height - 20px;
+            left: 0;
+            width: 100%;
+            background-color: vars.$white-color;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            z-index: 999;
+            flex-direction: column;
+
+            .menu {
+                flex-direction: column;
+                align-items: center;
+                padding: 1rem 0;
+                gap: 0;
+
+                &:hover .submenu,
+                .submenu:hover {
+                    display: none;
+                }
+            }
+
+            ul > li > a {
+                color: vars.$dark-color;
+            }
+        }
+
+        .burger-toggle:checked ~ .main-nav {
+            max-height: 500px;
+        }
+
+        .site-header.scrolled {
+            display: none;
+        }
+    }
+}

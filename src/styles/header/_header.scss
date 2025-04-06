@@ -1,0 +1,19 @@
+@use "../variables" as vars;
+@use "../mixins" as mixins;
+@use "container";
+@use "logo";
+@use "burger";
+@use "menu";
+@use "social";
+@use "responsive";
+@use "override";
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: all 0.3s ease;
+    background-color: transparent;
+    z-index: 10;
+}

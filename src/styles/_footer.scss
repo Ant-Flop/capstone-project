@@ -2,9 +2,10 @@
 @use "mixins" as mixins;
 
 .site-footer {
-    background-color: vars.$primary-color;
-    color: white;
+    background-color: vars.$dark-color;
+    color: vars.$white-color;
     padding: 1rem 0;
+    margin-top: 2rem;
     text-align: center;
 
     p {

@@ -1,0 +1,32 @@
+@use "../variables" as vars;
+@use "../mixins" as mixins;
+
+body[data-page="gallery"] .main-content {
+    .filter-options {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 1rem;
+    }
+
+    .filter-options select,
+    .filter-options input[type="text"] {
+        padding: 10px 14px;
+        border: 1px solid vars.$border-light-color;
+        border-radius: 8px;
+        font-size: 1rem;
+        outline: none;
+        transition: border-color 0.3s ease;
+    }
+
+    .filter-options input {
+        width: 200px;
+    }
+
+    .sorting,
+    .filtering {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+}

@@ -7,11 +7,11 @@
 
 @mixin respond($breakpoint) {
     @if $breakpoint == tablet {
-        @media (max-width: 768px) {
+        @media (width <= 768px) {
             @content;
         }
     } @else if $breakpoint == mobile {
-        @media (max-width: 480px) {
+        @media (width <= 480px) {
             @content;
         }
     }

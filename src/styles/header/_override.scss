@@ -1,0 +1,28 @@
+@use "../variables" as vars;
+@use "../mixins" as mixins;
+
+body[data-page="gallery"],
+body[data-page="about-us"],
+body[data-page="contacts"] {
+    .site-header {
+        background-color: vars.$white-color;
+        color: vars.$dark-color;
+        box-shadow: 0 2px 5px vars.$box-shadows;
+
+        .main-nav a {
+            color: vars.$dark-color;
+        }
+
+        .logo {
+            color: vars.$primary-color;
+        }
+
+        .burger span {
+            background-color: vars.$dark-color;
+        }
+    }
+
+    .main-content {
+        padding-top: 100px;
+    }
+}

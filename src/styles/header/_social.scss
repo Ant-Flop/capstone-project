@@ -1,0 +1,22 @@
+@use "../variables" as vars;
+@use "../mixins" as mixins;
+
+.site-header {
+    .social-icons {
+        display: flex;
+        gap: 0.8rem;
+        justify-self: end;
+        align-items: center;
+        height: 100%;
+
+        a img {
+            width: 27px;
+            height: 27px;
+            transition: filter 0.2s;
+
+            &:hover {
+                filter: none;
+            }
+        }
+    }
+}

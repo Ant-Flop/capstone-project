@@ -1,0 +1,11 @@
+@use "../variables" as vars;
+@use "../mixins" as mixins;
+
+.site-header {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        align-items: center;
+        gap: 2rem;
+    }
+}

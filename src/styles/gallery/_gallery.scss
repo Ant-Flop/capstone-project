@@ -1,0 +1,15 @@
+@use "../variables" as vars;
+@use "../mixins" as mixins;
+@use "course-card";
+@use "filters";
+@use "pagination";
+
+body[data-page="gallery"] .main-content {
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 50px;
+        padding: 20px 0;
+        margin-top: 30px;
+    }
+}

@@ -1,0 +1,44 @@
+@use "../variables" as vars;
+@use "../mixins" as mixins;
+
+body[data-page="gallery"] .main-content {
+    .pagination {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .page-buttons {
+        display: flex;
+        gap: 5px;
+    }
+
+    .page-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &.disabled {
+            background-color: vars.$disabled-color;
+            cursor: not-allowed;
+        }
+    }
+
+    .prev-btn,
+    .next-btn {
+        width: 100px;
+    }
+
+    .show-more-btn:disabled,
+    .prev-btn:disabled,
+    .next-btn:disabled {
+        background-color: vars.$disabled-color;
+        cursor: not-allowed;
+    }
+
+    .pagination span {
+        padding: 10px;
+        cursor: not-allowed;
+    }
+}
