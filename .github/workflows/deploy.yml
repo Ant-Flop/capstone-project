@@ -30,9 +30,11 @@ jobs:
               run: |
                   mkdir public
                   cp -r src/*.html public/
-                  cp -r src/assets public/
-                  cp -r src/scripts public/
-                  cp -r dist/styles public/styles
+                  cp -r src/assets public/assets
+                  cp -r src/data public/data
+                  cp -r src/scripts public/scripts
+                  mkdir -p public/styles
+                  cp -r dist/styles/styles.css public/styles/
 
             - name: Deploy to GitHub Pages
               uses: peaceiris/actions-gh-pages@v4
